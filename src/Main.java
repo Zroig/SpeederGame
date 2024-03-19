@@ -13,7 +13,7 @@ public class Main {
 
         carrera.startRace();
 
-       /*  while (carrera.getRacing()) {
+        while (carrera.getRacing()) {
             //Calcular velocitat
             Speeder1.setSpeed(calcVelocitat());
             Speeder2.setSpeed(calcVelocitat());
@@ -25,8 +25,7 @@ public class Main {
             //Comprovar guanyador
             carrera.checkWinner();
         }
-        */
-        calcVelocitat();
+        
     }
 
     public static int calcVelocitat() {
