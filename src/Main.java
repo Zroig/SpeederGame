@@ -12,16 +12,17 @@ public class Main {
         carrera.addSpeeder(Speeder3);
 
         carrera.startRace();
-        
+
         while (carrera.getRacing()) {
+            //Calcular velocitat
             Speeder1.setSpeed(calcVelocitat());
             Speeder2.setSpeed(calcVelocitat());
             Speeder3.setSpeed(calcVelocitat());
+            //Moure
             Speeder1.move();
-            carrera.checkWinner();
             Speeder2.move();
-            carrera.checkWinner();
             Speeder3.move();
+            //Comprovar guanyador
             carrera.checkWinner();
         }
     }
