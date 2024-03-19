@@ -19,14 +19,14 @@ de regles “mínimes” del joc són:
     3. Implementar classes i mètodes per controlar les carreres dels speeders.
 2. Classes i mètodes:
     1. Classe SBike
-        1 Atributs: speeder (String), velocitat (int), posicio (int)
-        2 Mètodes: move(), getPosicio(), getSpeeder(), setSpeeder()
+        1. Atributs: speeder (String), velocitat (int), posicio (int)
+        2. Mètodes: move(), getPosicio(), getSpeeder(), setSpeeder()
     2. Classe Race
-        1 Atributs: sbikes (ArrayList<SBike>), distància (int), guanyador (SBike)
-        2 Mètodes: startRace(), checkWinner(), displayResults()
+        1. Atributs: sbikes (ArrayList<SBike>), distància (int), guanyador (SBike)
+        2. Mètodes: startRace(), checkWinner(), displayResults()
     3. Classe Main
-        1 Mètodes: main()
-        2 Mètode calcVelocitat()
+        1. Mètodes: main()
+        2. Mètode calcVelocitat()
             1. Crear una matriu d’enters de 8x8
             2. Omplir 16 cel·les aleatòriament amb números naturals en el rang [-1..0..3].
             3. Generar dos números aleatoris per seleccionar fila i columna.
