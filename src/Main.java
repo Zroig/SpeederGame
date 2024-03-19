@@ -13,7 +13,7 @@ public class Main {
 
         carrera.startRace();
 
-        while (carrera.getRacing()) {
+       /*  while (carrera.getRacing()) {
             //Calcular velocitat
             Speeder1.setSpeed(calcVelocitat());
             Speeder2.setSpeed(calcVelocitat());
@@ -25,16 +25,25 @@ public class Main {
             //Comprovar guanyador
             carrera.checkWinner();
         }
+        */
+        calcVelocitat();
     }
 
     public static int calcVelocitat() {
         int[][] diana = new int[8][8];
-        int velocitat, posX, posY;
+        int velocitat, posX, posY, cont = 0;
         double m = 0.25, fm;
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                diana[i][j] = rand.nextInt(4)-1;
+                    diana[i][j] = rand.nextInt(5)-1;
+                
             }
+        }
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                System.out.print(diana[i][j]+" ");
+            }
+            System.out.println("");
         }
         posX = rand.nextInt(8);
         posY = rand.nextInt(8);
