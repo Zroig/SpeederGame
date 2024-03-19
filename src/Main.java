@@ -31,7 +31,7 @@ public class Main {
 
     public static int calcVelocitat() {
         int[][] diana = new int[8][8];
-        int velocitat, posX, posY, cont = 0;
+        int velocitat, posX, posY;
         double m = 0.25, fm;
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
