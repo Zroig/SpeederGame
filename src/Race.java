@@ -40,7 +40,7 @@ public class Race {
     public void displayResults() {
         System.out.println(winner.getSpeeder());
         for (int i = 0; i < sbikes.size(); i++) {
-                System.out.println(sbikes.get(i).getSpeeder());
+                System.out.println(i+1+" "+sbikes.get(i).getSpeeder());
             }
         }
     }
