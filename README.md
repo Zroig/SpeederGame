@@ -14,19 +14,19 @@ des dels Caganius fins als Marvel (Superherois).
 Les especificacions bàsiques, les classes i els mètodes que cal desenvolupar, així com la base
 de regles “mínimes” del joc són:
 1. Especificacions bàsiques:
-    a. Mode de joc en consola de sistema (sense interfície gràfica).
-    b. Utilitzar Java com a llenguatge de programació.
-    c. Implementar classes i mètodes per controlar les carreres dels speeders.
+    1. Mode de joc en consola de sistema (sense interfície gràfica).
+    2. Utilitzar Java com a llenguatge de programació.
+    3. Implementar classes i mètodes per controlar les carreres dels speeders.
 2. Classes i mètodes:
-    a. Classe SBike
-        ● Atributs: speeder (String), velocitat (int), posicio (int)
-        ● Mètodes: move(), getPosicio(), getSpeeder(), setSpeeder()
-    b. Classe Race
-        ● Atributs: sbikes (ArrayList<SBike>), distància (int), guanyador (SBike)
-        ● Mètodes: startRace(), checkWinner(), displayResults()
-    c. Classe Main
-        ● Mètodes: main()
-        ● Mètode calcVelocitat()
+    1. Classe SBike
+        1 Atributs: speeder (String), velocitat (int), posicio (int)
+        2 Mètodes: move(), getPosicio(), getSpeeder(), setSpeeder()
+    2. Classe Race
+        1 Atributs: sbikes (ArrayList<SBike>), distància (int), guanyador (SBike)
+        2 Mètodes: startRace(), checkWinner(), displayResults()
+    3. Classe Main
+        1 Mètodes: main()
+        2 Mètode calcVelocitat()
             1. Crear una matriu d’enters de 8x8
             2. Omplir 16 cel·les aleatòriament amb números naturals en el rang [-1..0..3].
             3. Generar dos números aleatoris per seleccionar fila i columna.
