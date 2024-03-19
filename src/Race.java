@@ -38,9 +38,10 @@ public class Race {
     }
 
     public void displayResults() {
-        System.out.println("1 "+winner.getSpeeder());
+        System.out.println("+-------------------------------------+\n|            R A N K I N G            |\n+-------------------------------------+");
+        System.out.println("    1. "+winner.getSpeeder());
         for (int i = 0; i < sbikes.size(); i++) {
-                System.out.println(i+1+" "+sbikes.get(i).getSpeeder());
+                System.out.println("    "+(i+2)+". "+sbikes.get(i).getSpeeder());
             }
         }
     }
