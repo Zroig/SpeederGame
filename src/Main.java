@@ -35,15 +35,8 @@ public class Main {
         double m = 0.25, fm;
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                    diana[i][j] = rand.nextInt(5)-1;
-                
+                diana[i][j] = rand.nextInt(4)-1;
             }
-        }
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                System.out.print(diana[i][j]+" ");
-            }
-            System.out.println("");
         }
         posX = rand.nextInt(8);
         posY = rand.nextInt(8);
