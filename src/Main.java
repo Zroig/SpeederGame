@@ -1,16 +1,17 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
     static Random rand = new Random();
     public static void main(String[] args) {
         Speed.Velocitat Velocitat = new Speed.Velocitat();
-
+        
         SBike Speeder1 = new SBike("El Rayo McQueen");
         SBike Speeder2 = new SBike("Annakin Skywalker");
         SBike Speeder3 = new SBike("Fernando Alonso");
 
         Race carrera = new Race(50);
-        
+
         carrera.addSpeeder(Speeder1);
         carrera.addSpeeder(Speeder2);
         carrera.addSpeeder(Speeder3);
