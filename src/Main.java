@@ -30,21 +30,21 @@ public class Main {
 
     public static int calcVelocitat() {
         int[][] diana = new int[8][8];
-        int velocitat, posX, posY, aux = 0;
-        int cont = 0;
+        int velocitat, posX, posY, cont = 0, aux = 0;
         double m = 0.25, fm;
+
         while (cont < 16) {
             posX = rand.nextInt(8);
             posY = rand.nextInt(8);
-            if (diana[posX][posY] == 0) { 
+            if (diana[posX][posY] == 0) {
+                aux = rand.nextInt(5) - 1;
                 while (aux == 0) {
                     aux = rand.nextInt(5) - 1;
                 }
-                diana[posX][posY] = aux;
+                    diana[posX][posY] = aux;
                 cont++;
-                aux = 0;
-             }
-         }
+            }
+        }
         posX = rand.nextInt(8);
         posY = rand.nextInt(8);
         fm = diana[posX][posY] + (m * diana[posX][posY]);
