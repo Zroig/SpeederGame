@@ -10,7 +10,7 @@ public class Main {
         SBike Speeder3 = new SBike("Fernando Alonso");
 
         int distancia = 100;
-        Race carrera = new Race(50);
+        Race carrera = new Race(distancia);
 
         carrera.addSpeeder(Speeder1);
         carrera.addSpeeder(Speeder2);
