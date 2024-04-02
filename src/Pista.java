@@ -5,11 +5,13 @@ public class Pista {
     int distancia;
     final double probObstacle = 0.11;
     ArrayList<Integer> obst = new ArrayList<>();
+    ArrayList<Boolean> obstType = new ArrayList<>();
     Random probabilitat = new Random();
 
     public Pista(int distancia) {
         this.distancia = distancia;
         fillObst();
+        getObstacleType();
     }
 
     private void fillObst() {
@@ -20,6 +22,14 @@ public class Pista {
                 obst.add(i);
                 
             }
+        }
+    }
+
+    private void getObstacleType() {
+        boolean isGood = false;
+        for (int i = 0; i < obst.size(); i++) {
+            isGood = probabilitat.nextDouble(0,1) > 0.4;
+            obstType.add(isGood);
         }
     }
 
