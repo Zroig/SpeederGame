@@ -18,6 +18,7 @@ public class Pista {
             isObstacle = probabilitat.nextDouble(0,1) <= probObstacle+0.01;
             if (isObstacle) {
                 obst.add(i);
+                
             }
         }
     }
