@@ -34,6 +34,18 @@ de regles “mínimes” del joc són:
                 𝑓𝑚 = 𝑓𝑖𝑙𝑎 + (𝑚 * 𝑓𝑖𝑙𝑎)
             5. La velocitat de la 74-Z Speeder Bike serà:
                 𝑣 = 𝑣𝑎𝑙𝑜𝑟[𝑓𝑖𝑙𝑎, 𝑐𝑜𝑙𝑢𝑚𝑛𝑎] * 𝑓𝑚
+3. Les Pistes amb obstacles: [OPCIONAL]
+    Fins ara el joc es realitza sobre una pista que té una distància màxima. Extendre el joc tal que cada speeder tingui una Pista Personalitzada. Cada nova partida assigna un tipus de pista personalitzada a cada jugador. Característiques de les pistes:
+    1. La pista conté un conjunts d’obstacles i bonificacions.
+        1. Tipus d'obstacles (Penalitzacions):
+            1. Speeder està cansat i s’atura a descansar, el que representa que la següent tirada el moviment de la 74-Z Speeder Bike serà igual a zero.
+            2. Speeder és penalitzat amb un pit back i ha de tornar a la posició anterior.
+        2. Tipus d’obstacles (Bonificacions):
+            1. Speeder cau en una posició amb un camí alternatiu, funnel time, que el fa avançar un nombre ‘np’ de casellas igual a multiplicar el valor de la propera tirada per 1.25.
+            2. Speeder cau en una posició on hi ha el power-up “Zwift 1001-Z Speeder Bike”. Aquest power-up fa avançar a l’Speeder la suma de la tirada anterior més la següent multiplicat per 2.
+    2. En una pista poden haver-hi un màxim d’un 11% d’obstacles. Tal que un 40% seran penalitzacions i un 60% bonificacions. El nombre màxim d’obstacles es computará en base a la mida total de la pista.
+
+    Heu de crear les classes Pista i Obstacle, i les subclasses Bonifica, Penalitza. Així com tots els mètodes que considereu per a donar solució a aquest escenari.
 
 ## Folder Structure
 
