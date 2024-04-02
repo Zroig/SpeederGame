@@ -11,6 +11,9 @@ public class Main {
 
         int distancia = 100;
         Race carrera = new Race(distancia);
+        Pista pista = new Pista(distancia);
+
+        pista.printPista();
 
         carrera.addSpeeder(Speeder1);
         carrera.addSpeeder(Speeder2);
