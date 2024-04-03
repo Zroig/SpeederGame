@@ -46,4 +46,20 @@ public class Pista {
         System.out.println("--------------");
     }
 
+    public int whichObstacle(int distancia) {
+        int aux;
+        boolean exists = false;
+        for (int i = 0; i < obst.size(); i++) {
+            exists = distancia==obst.get(i) ? true : false;
+            if (exists) {
+                obst.remove(i);
+                break;
+            }
+        }
+        
+        
+        return 2;
+
+    }
+
 }
