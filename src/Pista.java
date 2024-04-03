@@ -11,7 +11,7 @@ public class Pista {
     public Pista(int distancia) {
         this.distancia = distancia;
         fillObst();
-        getObstacleType();
+        setObstacleType();
     }
 
     private void fillObst() {
@@ -25,7 +25,7 @@ public class Pista {
         }
     }
 
-    private void getObstacleType() {
+    private void setObstacleType() {
         boolean isGood = false;
         for (int i = 0; i < obst.size(); i++) {
             isGood = probabilitat.nextDouble(0,1) > 0.4;
