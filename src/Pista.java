@@ -1,17 +1,18 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 public class Pista {
     
     int distancia;
     final double probObstacle = 0.11;
     ArrayList<Integer> obst = new ArrayList<>();
-    ArrayList<Boolean> obstType = new ArrayList<>();
+    HashMap<Integer, Obstacle> obstWithType = new HashMap<>();
     Random probabilitat = new Random();
 
     public Pista(int distancia) {
         this.distancia = distancia;
         fillObst();
-        setObstacleType();
+        setObstacle(distancia);
     }
 
     private void fillObst() {
@@ -25,12 +26,10 @@ public class Pista {
         }
     }
 
-    private void setObstacleType() {
+    private boolean setObstacleType() {
         boolean isGood = false;
-        for (int i = 0; i < obst.size(); i++) {
-            isGood = probabilitat.nextDouble(0,1) > 0.4;
-            obstType.add(isGood);
-        }
+        isGood = probabilitat.nextDouble(0,1) > 0.4;
+        return isGood;
     }
 
     public void printPista() {
@@ -46,18 +45,29 @@ public class Pista {
         System.out.println("--------------");
     }
 
-    public int whichObstacle(int distancia) {
+    public void setObstacle(int distancia) {
         boolean exists = false;
+        boolean bonus = false;
+        boolean type = false;
         for (int i = 0; i < obst.size(); i++) {
-            exists = distancia==obst.get(i) ? true : false;
-            if (exists) {
-                obst.remove(i);
-                break;
+            for (int j = 0; j<distancia; j++) {
+                exists = j==obst.get(i) && !(obstWithType.containsKey(j)) ? true : false;
+                if (exists) {
+                    bonus = setObstacleType();
+                    if (bonus) {
+                        type = probabilitat.nextDouble(0,1) >= 0.5;
+                        Obstacle obst = new Bonificacio(type);
+                        obstWithType.put(i, obst);
+                    } else {
+                        type = probabilitat.nextDouble(0,1) >= 0.5;
+                        Obstacle obst = new Penalitzacio(type);
+                        obstWithType.put(i, obst);
+                    }
+                    break;
+                }  
             }
+            
         }
-        
-        
-        return 2;
 
     }
 
