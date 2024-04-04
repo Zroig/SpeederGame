@@ -5,11 +5,11 @@ public class Penalitzacio extends Obstacle {
         super(tipus);
     }
 
-    public int effect(int meter) {
+    public int effect(int meter, int velocitat, int oldSpeed) {
         if (tipus) {
-            return meter;
+            return meter-velocitat;
         } else {
-            return meter-1;
+            return meter-oldSpeed;
         }
     }
 

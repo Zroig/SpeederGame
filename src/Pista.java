@@ -71,4 +71,11 @@ public class Pista {
 
     }
 
+    public int obstCheck(int meter, int velocitat, int oldSpeed) {
+        if (obstWithType.containsKey(meter)) {
+            meter=obstWithType.get(meter).effect(meter, velocitat, oldSpeed);
+        }
+        return meter;
+    }
+
 }

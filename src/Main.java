@@ -27,6 +27,10 @@ public class Main {
             Speeder1.setSpeed(Velocitat.tirarBola());
             Speeder2.setSpeed(Velocitat.tirarBola());
             Speeder3.setSpeed(Velocitat.tirarBola());
+            //Obstacle
+            Speeder1.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
+            Speeder2.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
+            Speeder3.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
             //Moure
             Speeder1.move();
             Speeder2.move();
