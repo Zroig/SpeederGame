@@ -47,7 +47,6 @@ public class Pista {
     }
 
     public int whichObstacle(int distancia) {
-        int aux;
         boolean exists = false;
         for (int i = 0; i < obst.size(); i++) {
             exists = distancia==obst.get(i) ? true : false;
