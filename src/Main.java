@@ -11,9 +11,13 @@ public class Main {
 
         int distancia = 100;
         Race carrera = new Race(distancia);
-        Pista pista = new Pista(distancia);
+        Pista pista1 = new Pista(distancia);
+        Pista pista2 = new Pista(distancia);
+        Pista pista3 = new Pista(distancia);
 
-        pista.printPista();
+        pista1.printPista();
+        pista2.printPista();
+        pista3.printPista();
 
         carrera.addSpeeder(Speeder1);
         carrera.addSpeeder(Speeder2);
@@ -28,13 +32,15 @@ public class Main {
             Speeder2.setSpeed(Velocitat.tirarBola());
             Speeder3.setSpeed(Velocitat.tirarBola());
             //Obstacle
-            Speeder1.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
-            Speeder2.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
-            Speeder3.obstMove(pista.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
+            Speeder1.obstMove(pista1.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
+            Speeder2.obstMove(pista2.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
+            Speeder3.obstMove(pista3.obstCheck(Speeder1.getPosicio(), Speeder1.getSpeed(), Speeder1.getOldSpeed()));
             //Moure
             Speeder1.move();
             Speeder2.move();
             Speeder3.move();
+            //Posicions
+            System.out.println(Speeder1.getPosicio()+" "+Speeder2.getPosicio()+" "+Speeder3.getPosicio());
             //Comprovar guanyador
             carrera.checkWinner();
         }
