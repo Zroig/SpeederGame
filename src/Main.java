@@ -40,7 +40,7 @@ public class Main {
             Speeder2.move();
             Speeder3.move();
             //Posicions
-            System.out.println(Speeder1.getPosicio()+" "+Speeder2.getPosicio()+" "+Speeder3.getPosicio());
+            //System.out.println(Speeder1.getPosicio()+" "+Speeder2.getPosicio()+" "+Speeder3.getPosicio());
             //Comprovar guanyador
             carrera.checkWinner();
         }
